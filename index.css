@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+body{
+    background-color:#FEEBE7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+header{
+    background-color: #2E160D;
+    color: #FEEBE7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo{
+    margin-left: 20px;
+}
+.botones{
+    margin-right: 20px;
+}
+
+.boton{
+    height: 30px;
+    width: 90px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: transparent;
+    border-color: #fff;
+    border-width: 1px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
