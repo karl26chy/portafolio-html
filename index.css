@@ -4,38 +4,132 @@
     box-sizing: border-box;
 }  
 
-body{
-    background-color:#FEEBE7;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+:root {
+    --fondo: #f5f5f5;
+    --texto: #1a1a1a;
+    --gris: #777;
+    --acento: #000;
 
 }
 
-header{
-    background-color: #2E160D;
-    color: #FEEBE7;
+body{
+    background-color:var(--fondo);
+    color: var(--texto);
+    font-family: 'Inter', sans-serif;
+}
+h1, h2,h3{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 25px 60px;
+    font-size: 12px;
+    letter-spacing: 2px;
 }
 
 .titulo{
-    margin-left: 20px;
+    font-family:'Playfair Display', serif ;
+    font-size: 14px;
 }
 .botones{
-    margin-right: 20px;
+    margin-right: flex;
 }
 
 .boton{
-    height: 30px;
-    width: 90px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    background-color: transparent;
-    border-color: #fff;
-    border-width: 1px;
-    border-radius: 10%;
-    margin-bottom: 10px;
-    margin-top: 10px;
+  text-decoration: none;
+  color: var(--texto);
+  margin-left: 25px;
+  transition: 0.3s;
+}
+.boton:hover{
+    opacity: 0.5;
 }
 
+.hero {
+    padding: 120px 60px;
+    }
+.hero h1{
+    font-size: 90px;
+    line-height: 1;
+    
+}
 
+.hero p{
+    font-size: 16px;
+    color: var(--gris);
+    max-width: 500px;
+    margin-top: 30px;
+}
+
+section{
+    padding: 80px 60px;
+}
+#sobremi{
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+
+}
+#sobremi h2{
+    margin-bottom: 20px;
+}
+#sobremi p {
+    max-width: 600px;
+    color: var(--gris);
+    line-height: 1.6;
+
+}
+.contenedor{ 
+    max-width: 700px;
+    text-align: center;
+}
+#loquehago .contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+#loquehago {
+
+    padding: 120px 60px;
+} 
+
+#loquehago h3 {
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+#loquehago p {
+    color: var(--gris);
+    margin-top: 5px;
+}
+
+#proyectos {
+    padding: 100px 60px;
+}
+#proyectos h2 {
+    margin-bottom: 40px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 100px;
+    margin-top: 100px;
+    
+}
+
+.skill h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 14px;
+    color:var(--gris);
+   
+}
