@@ -120,8 +120,14 @@ section{
 
 #loquehago {
 
-    padding: 120px 60px;
+    padding: 100px 20px;
 } 
+#loquehago h2{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
 
 #loquehago h3 {
     margin-top: 30px;
@@ -138,29 +144,33 @@ section{
 .skills {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 100px;
-    margin-top: 30px;
+    gap: 60px;
+    margin-top: 20px;
     
 }
 
 
 .skill h3 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
+    text-transform: lowercase;
 }
 
 .skill p {
-    font-size: 14px;
+    font-size: 15px;
     color:var(--gris);
-   
+   line-height: 1.5;
 }
 
 .skill img {
-    width: 200px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     margin-top: 20px;
     filter: grayscale(100%);
     opacity: 0.7;
     transition: 0.3s;
+    border-radius: 4px;
 }
 
 .skill img:hover { 
@@ -180,7 +190,7 @@ text-align: center;
 
 .proyectos-grid{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 40px;
     margin-top: 50px;
     text-align: left;
@@ -233,19 +243,90 @@ text-align: center;
     margin-top: 5px;
     color: var(--gris);
 }
-
-#contacto {
-    text-align: center;
-    padding:80px 20px ;
+footer{
+    padding: 120px 20px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;    
+}
+.contenedor-footer{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    
 }
 
-footer h2 {
-    font-size: 24px;
+
+.contacto-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    text-align: left;
 }
-footer p {
-    margin-top: 10px;
+.contacto-info{
+    flex: 1;
+}
+.contacto-info h2{
+    border: none;
+    margin-bottom: 20px;
+}
+.contacto-info p {
     color: var(--gris);
+    max-width: 350px;
 }
+.email-contacto {
+    margin-top: 30px;
+    color:var(--texto) !important;
+}
+.contacto-form{
+    flex: 1;
+    width: 100%;
+
+}
+.input-group {
+    margin-bottom: 20px;
+}
+input, textarea{
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-family: 'inter', sans-serif;
+    font-size: 14px;
+    color: var(--texto);
+    outline: none;
+    transition: 0.3s;    
+}
+input:focus,textarea:focus{
+    border-bottom: 1px solid var(--texto);
+}
+textarea{
+    resize: none;
+}
+.btn-enviar{
+    background-color: var(--texto);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'inter', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+
+}
+.btn-enviar:hover{
+    background-color: var(--gris);
+}
+
+
+
+
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -273,6 +354,16 @@ section {
 .skills {
     grid-template-columns: 1fr;
     gap: 50px;
+
+
+.contacto-flex{
+    flex-direction: column;
+    gap: 50px;
+    }
+.contacto-info, .contacto-form{
+    flex: none;
+    width: 100%;
+}
 }
 
 }
