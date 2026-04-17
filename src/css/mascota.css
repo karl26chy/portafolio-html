@@ -24,7 +24,7 @@ header h1{
 
 .galeria-mascotas{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(3,1fr);
     gap:25px;
     max-width: 1200px;  
     margin: 0 auto;
@@ -84,4 +84,23 @@ footer{
 }
 .btn-volver:hover{
     background-color: #2d7a52;
+}
+
+
+@media (max-width: 426px) {
+.galeria-mascotas{
+    grid-template-columns: repeat(2,1fr);
+
+    
+}
+.tarjeta-mascotas img{
+    height: 150px;
+}
+.tarjeta-mascotas {
+    padding: 10px;
+}
+.tarjeta-mascotas p{
+    font-size: 0.7rem;
+}
+
 }
