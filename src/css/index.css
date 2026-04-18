@@ -110,6 +110,13 @@ section {
     padding: 100px 20px;
 
 }
+#btn-cambiar{
+    border: none;
+    background-color: var(--fondo);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
 
 #sobremi h2 {
     margin-bottom: 20px;
@@ -121,6 +128,11 @@ section {
     line-height: 1.6;
 
 }
+
+
+
+
+
 
 .contenedor {
     max-width: 700px;
