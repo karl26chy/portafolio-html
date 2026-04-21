@@ -1,0 +1,40 @@
+
+
+@media (max-width:1024px) {
+    .hero {
+    gap: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+}
+
+@media (max-width:500px) {
+    .hero{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .skills, .proyectos-grid{
+        grid-template-columns: 1fr;
+        padding: 0rem 1rem;
+    }
+    .contenedor p{
+        text-align: justify;
+        padding: 0rem 1rem;
+    }
+    .botones {
+    flex-direction: column;
+    }
+    .contacto-flex {
+    flex-direction: column;
+    }
+    .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
