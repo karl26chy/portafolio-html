@@ -42,3 +42,30 @@ document.body.appendChild(mensaje);
 setTimeout(() => {
     mensaje.remove();
 }, 3000);
+
+
+
+
+
+// Seleccionamos los elementos
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('nav-menu');
+
+// Verificación de seguridad en consola
+if (!menuIcon || !navMenu) {
+    console.warn("Error: No se encontró el icono o el menú en el HTML. Revisa los IDs.");
+}
+
+// Evento para abrir/cerrar el menú
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuIcon.classList.toggle('toggle');
+});
+
+// Cerrar el menú al hacer clic en cualquier enlace
+document.querySelectorAll('.boton').forEach(enlace => {
+    enlace.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuIcon.classList.remove('toggle');
+    });
+});

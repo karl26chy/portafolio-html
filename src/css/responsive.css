@@ -1,8 +1,6 @@
-
-
 @media (max-width:1024px) {
     .hero {
-    gap: 100px;
+        gap: 100px;
     }
 }
 
@@ -10,31 +8,80 @@
     .proyectos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-   
+
+    header {
+        position: relative;
+        /* Esto asegura que el menú se posicione respecto al header */
+        z-index: 1000;
+        /* Mantiene todo el header arriba */
+    }
+
+
+    .menu-hamburguesa {
+        display: flex;
+        /* Aparece el icono */
+
+    }
+.botones {
+        /* En lugar de display: none, usamos opacidad y posición */
+        display: flex; 
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--fondo);
+        padding:  30px 50px;
+        
+        /* Estado inicial (Oculto) */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px); /* Empieza un poco más arriba */
+        transition: all 0.4s ease-in-out; /* Animación suave */
+        pointer-events: none; /* Evita clics cuando está oculto */
+        
+        z-index: 999;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    }
+
+    /* Estado activo (Cuando se hace clic) */
+    .botones.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Baja suavemente a su posición original */
+        pointer-events: auto; /* Habilita los clics */
+    }
 }
 
 @media (max-width:500px) {
-    .hero{
+    .hero {
         flex-direction: column;
         gap: 3rem;
     }
-    .skills, .proyectos-grid{
+
+    .skills,
+    .proyectos-grid {
         grid-template-columns: 1fr;
         padding: 0rem 1rem;
     }
-    .contenedor p{
+
+    .contenedor p {
         text-align: justify;
         padding: 0rem 1rem;
     }
+
     .botones {
-    flex-direction: column;
+        flex-direction: column;
     }
+
     .contacto-flex {
-    flex-direction: column;
+        flex-direction: column;
     }
+
     .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

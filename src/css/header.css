@@ -8,6 +8,22 @@ header {
     font-size: 12px;
     letter-spacing: 2px;
 }
+/* --- Estilos base (Escritorio) --- */
+.menu-hamburguesa {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-hamburguesa span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--texto);
+    transition: 0.3s;
+}
 
 .titulo {
     font-family: 'Playfair Display', serif;
